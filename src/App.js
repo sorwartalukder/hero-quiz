@@ -10,6 +10,7 @@ function App() {
     {
       path: '/',
       element: <Main></Main>,
+      errorElement: <h1 className='text-3xl text-center'>Not Found  404</h1>,
       children: [
         {
           path: '/',
@@ -21,9 +22,12 @@ function App() {
           loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
           element: <Quizs></Quizs>
         },
-        { path: '/blog', element: <Blog></Blog> }
+        { path: '/blog', element: <Blog></Blog> },
+
+
       ]
-    }
+    },
+
   ])
   return (
     <div>
