@@ -23,8 +23,6 @@ function App() {
           element: <Quizs></Quizs>
         },
         { path: '/blog', element: <Blog></Blog> },
-
-
       ]
     },
 
